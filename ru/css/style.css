@@ -1,0 +1,1165 @@
+@charset "utf-8";
+@import "../fonts/RockStar/stylesheet.css" all;
+@import "../fonts/SFPro/stylesheet.css" all;
+@font-face {
+    font-family: "Wadik";
+    src: url("../fonts/Wadik/Wadik.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    background: linear-gradient( rgba(102, 103, 127, 0.35), transparent 1px), linear-gradient( 90deg, rgba(102, 103, 127, 0.35), transparent 1px);
+    background-size: 70px 70px;
+    background-position: center 0px;
+}
+
+
+/*Индикатор скролла страницы*/
+
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: transparent;
+    z-index: 996;
+}
+
+.progress-bar {
+    height: 5px;
+    background: #ff9900;
+    width: 0%;
+}
+
+
+/*Конец Индикатор скролла страницы*/
+
+.indent {
+    padding: 0px 4%;
+}
+
+#header {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    display: block;
+    font: 700 normal 20px/20px 'Wadik';
+    cursor: pointer;
+    text-decoration: none;
+    color: #000D08;
+}
+
+.logo-mob {
+    display: none;
+}
+
+
+/* Меню */
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu a.menu-item {
+    font: 400 normal 14px/14px 'Rock Star';
+    color: #000D08;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 22px;
+}
+
+.menu a.menu-item:hover {
+    transform: scale(1.1);
+}
+
+.menu a.urgent-launch {
+    display: block;
+    font: 400 normal 14px/14px 'Rock Star';
+    color: #000D08;
+    padding: 15px 22px;
+    background: #ff9900;
+    border: 2.5px solid #000D08;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 30px;
+    -webkit-box-shadow: 4px 4px 0px 0px #000D08;
+    box-shadow: 4px 4px 0px 0px #000D08;
+    transition: 0.5s;
+}
+
+.menu a.urgent-launch:hover {
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* Первый блок */
+
+.first-banner {
+    display: grid;
+    grid-template-columns: 60% 37%;
+    grid-gap: 3%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.first-banner .banner {
+    width: 100%;
+}
+
+.first-banner .text-wrap h1.title-mob {
+    display: none;
+}
+
+.first-banner .text-wrap h1 {
+    font: 700 normal 28px/36px 'Wadik';
+    color: #000D08;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    padding-right: 35px;
+}
+
+.first-banner .text-wrap h1 span {
+    color: #ff9900;
+}
+
+.first-banner .text-wrap .description {
+    font: 600 normal 20px/20px 'Rock Star';
+    margin-bottom: 65px;
+    padding-right: 35px;
+}
+
+.first-banner .text-wrap .banner-button {
+    display: inline-block;
+    font: 400 normal 18px/18px 'Rock Star';
+    color: #000D08;
+    padding: 20px 30px;
+    background: #ff9900;
+    border: 2.5px solid #000D08;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-box-shadow: 4px 4px 0px 0px #000D08;
+    box-shadow: 4px 4px 0px 0px #000D08;
+    transition: 0.5s;
+}
+
+.first-banner .text-wrap .banner-button:hover {
+    box-shadow: none;
+}
+
+
+/* Бегущая строка */
+
+.ticker {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    background-color: #ff9900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    user-select: none;
+}
+
+.ticker-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0px;
+    font: 700 normal 24px/24px 'Wadik';
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.ticker-inner .circle {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #000D08;
+    border-radius: 50%;
+    margin: 0px 25px;
+}
+
+
+/* Стиль заголовков в блоках*/
+
+.block-title {
+    font: 700 normal 28px/30px 'Wadik';
+    color: #000D08;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+
+
+/* Блок Обо мне */
+
+.about-me {
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.about-me .about-me-grid {
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-gap: 4%;
+}
+
+.about-me .about-me-grid .my-foto {
+    width: 100%;
+}
+
+.about-me .about-me-grid .about-me-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-me .about-me-grid .about-me-desc .about-me-desc-title,
+.about-me .about-me-grid .about-me-desc .about-me-desc-spec {
+    font: 700 normal 36px/42px 'Wadik';
+    color: #000D08;
+}
+
+.about-me .about-me-grid .about-me-desc .about-me-desc-title {
+    margin-bottom: 15px;
+}
+
+.about-me .about-me-grid .about-me-desc .about-me-desc-spec {
+    margin-bottom: 20px;
+}
+
+.about-me .about-me-grid .about-me-desc .about-me-desc-spec {
+    color: #ff9900;
+}
+
+.about-me .about-me-grid .about-me-desc .about-me-desc-text {
+    font: 400 normal 25px/26px 'Rock Star';
+    margin-bottom: 25px;
+}
+
+.about-me-desc-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-me-desc-buttons .soc-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.about-me-desc-buttons .soc-icon.telegram {
+    background-image: url('../images/telegram-black.webp');
+}
+
+.about-me-desc-buttons .soc-icon.viber {
+    background-image: url('../images/viber-black.webp');
+}
+
+.about-me-desc-buttons .soc-icon.whatsapp {
+    background-image: url('../images/whatsapp-black.webp');
+}
+
+.about-me-desc-buttons .soc-icon.telegram:hover {
+    background-image: url('../images/telegram-orange.webp');
+}
+
+.about-me-desc-buttons .soc-icon.viber:hover {
+    background-image: url('../images/viber-orange.webp');
+}
+
+.about-me-desc-buttons .soc-icon.whatsapp:hover {
+    background-image: url('../images/whatsapp-orange.webp');
+}
+
+.about-me-desc-buttons .button {
+    display: inline-block;
+    font: 400 normal 18px/18px 'Rock Star';
+    color: #000D08;
+    text-align: center;
+    padding: 23px 75px;
+    background: #ff9900;
+    border: 2.5px solid #000D08;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-box-shadow: 4px 4px 0px 0px #000D08;
+    box-shadow: 4px 4px 0px 0px #000D08;
+    transition: 0.5s;
+}
+
+.about-me-desc-buttons .button:hover {
+    box-shadow: none;
+}
+
+
+/* Черный блок */
+
+.black-block {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000D08;
+    padding: 100px 80px;
+}
+
+.black-block .media-buyer {
+    margin-right: 95px;
+}
+
+.black-block .media-buyer .rock {
+    position: absolute;
+    width: 480px;
+    top: 10px;
+    left: 70px;
+    z-index: 0;
+}
+
+.black-block .media-buyer .media-buyer-picture {
+    position: relative;
+    width: 500px;
+    z-index: 2;
+}
+
+.black-block .text p {
+    font: 700 normal 28px/32px 'Wadik';
+    color: #fff;
+}
+
+.black-block .text :first-child {
+    margin-bottom: 30px;
+}
+
+.black-block .text p span {
+    color: #ff9900;
+}
+
+
+/* Блок Кейсы */
+
+.cases {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.cases .block-title {
+    text-align: center;
+}
+
+
+/* Слайдер */
+
+.slider {
+    height: auto;
+}
+
+.slider .slick-track {
+    padding-bottom: 10px;
+}
+
+.slider-item {
+    width: auto;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0px 20px;
+}
+
+.slider-item .slider-image {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.slider-item .slider-image img {
+    width: 100%;
+}
+
+.slider-item .slider-image .activity {
+    position: absolute;
+    display: inline-block;
+    padding: 15px 60px;
+    font: 700 normal 20px/20px 'SF Pro Display';
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    text-transform: uppercase;
+}
+
+.slider-item .slider-desc {
+    padding: 0px 30px 35px;
+}
+
+.slider-item .slider-desc .slide-title {
+    min-height: 70px;
+    font: 700 normal 26px/30px 'SF Pro Display';
+    margin-bottom: 25px;
+}
+
+.slider-item .slider-desc .text {
+    font: 700 normal 20px/26px 'SF Pro Display';
+    padding-bottom: 10px;
+}
+
+.slider-item .slider-desc .text-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.slider-item .slider-desc .border-bottom {
+    border-bottom: 1px solid #000D08;
+}
+
+.slider-item .slide-button {
+    display: block;
+    width: 300px;
+    margin: 0 auto 30px;
+    font: 400 normal 18px/18px 'Rock Star';
+    color: #000D08;
+    text-align: center;
+    padding: 20px 0px;
+    background: #ff9900;
+    border: 2.5px solid #000D08;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-box-shadow: 4px 4px 0px 0px #000D08;
+    box-shadow: 4px 4px 0px 0px #000D08;
+    transition: 0.5s;
+}
+
+.slider-item .slide-button:hover {
+    box-shadow: none;
+}
+
+.slick-prev,
+.slick-next {
+    width: 36px;
+    height: 50px;
+    z-index: 10;
+    background-size: cover;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    content: none;
+}
+
+.slick-prev {
+    margin-left: -15px !important;
+    background-image: url(../images/icon-prev.webp);
+}
+
+.slick-next {
+    margin-right: -15px !important;
+    background-image: url(../images/icon-next.webp);
+}
+
+.slick-prev:hover {
+    z-index: 10;
+    background-image: url(../images/icon-prev-orange.webp);
+}
+
+.slick-next:hover {
+    z-index: 10;
+    background-image: url(../images/icon-next-orange.webp);
+}
+
+
+/*Блок тарифы услуг*/
+
+.services-mob {
+    display: none;
+}
+
+.services-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 170px;
+}
+
+.services-flex .services-flex-item {
+    padding: 35px 30px 45px;
+    width: 45%;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.services-flex .services-flex-item .services-title {
+    font: 700 normal 26px/26px 'Wadik';
+    color: #000D08;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.services-flex .services-flex-item .services-sub-title {
+    font: 700 normal 26px/26px 'Rock Star';
+    color: #ff9900;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services-flex .services-flex-item .services-desc {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+.services-flex .services-flex-item .services-desc li {
+    font: 400 normal 20px/20px 'Rock Star';
+    margin-bottom: 15px;
+}
+
+.services-flex .services-flex-item .services-desc li span {
+    font-weight: 600;
+}
+
+.services-flex .test {
+    margin-right: 40px;
+}
+
+.services-flex .services-flex-item .button {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    font: 400 normal 18px/18px 'Rock Star';
+    color: #000D08;
+    text-align: center;
+    padding: 20px 0px;
+    background: #ff9900;
+    border: 2.5px solid #000D08;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-box-shadow: 4px 4px 0px 0px #000D08;
+    box-shadow: 4px 4px 0px 0px #000D08;
+    transition: 0.5s;
+}
+
+.services-flex .services-flex-item .button:hover {
+    box-shadow: none;
+}
+
+
+/* Блок Этапы работы */
+
+.steps-block {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40% 50%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 200px;
+    margin-bottom: 100px;
+}
+
+.steps-block .fixed-title {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 100px;
+    align-self: start;
+}
+
+.steps-block .fixed-title span {
+    font: 700 normal 28px/28px 'Wadik';
+    color: #000D08;
+    margin-right: 20px;
+}
+
+.steps-block .fixed-title img {
+    width: 70px;
+}
+
+.steps-block .steps {
+    width: 100%;
+}
+
+.steps-block .steps .steps-item {
+    margin-bottom: 100px;
+}
+
+.steps-block .steps .steps-item.steps-item-last {
+    margin-bottom: 0px;
+}
+
+.steps-block .steps .steps-item .step-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 27px;
+}
+
+.steps-block .steps .steps-item .step-label .step-name {
+    font: 400 normal 16px/16px 'Rock Star';
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #ff9900;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+
+.steps-block .steps .steps-item .step-label .step-number {
+    font: 700 normal 28px/28px 'Wadik';
+    color: #fff;
+    text-shadow: 0px 0 0 #000d08, 0px 0 0 #000d08, 0 0px 0 #000d08, 0 0px 0 #000d08, 1px 1px #000d08, -1px -1px 0 #000d08, 1px -1px 0 #000d08, -1px 1px 0 #000d08;
+    ;
+}
+
+.steps-block .steps .steps-item .step-text {
+    font: 400 normal 20px/24px 'Rock Star';
+    color: #000D08;
+    padding-right: 30px;
+}
+
+
+/* Блок Форма */
+
+.form-block {
+    position: relative;
+    margin-top: 200px;
+    padding-bottom: 100px;
+}
+
+.form-block .form {
+    width: 65%;
+}
+
+.form-block .form .form-title {
+    font: 700 normal 30px/33px 'Wadik';
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.form-block .form .form-sub-title {
+    font: 700 normal 23px/33px 'Wadik';
+    color: #000D08;
+    margin-bottom: 70px;
+}
+
+.form-block .statue {
+    position: absolute;
+    right: 100px;
+    top: -10px;
+    width: 48%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+#fields {
+    display: flex;
+    flex-direction: column;
+}
+
+#note .ok {
+    min-height: 300px;
+    text-align: left;
+    font: 400 normal 26px/30px 'Rock Star';
+}
+
+#note .err {
+    margin-top: 30px;
+    text-align: left;
+    font: 400 normal 26px/30px 'Rock Star';
+}
+
+#fields2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#note2 .ok {
+    min-height: 300px;
+    text-align: left;
+    font: 400 normal 26px/30px 'Rock Star';
+}
+
+#note2 .err {
+    margin-top: 30px;
+    text-align: left;
+    font: 400 normal 26px/30px 'Rock Star';
+}
+
+.contact input[type=text],
+.contact input[type=tel] {
+    border: none;
+    padding: 10px 5px;
+    border-bottom: 2px solid #000D08;
+    margin-bottom: 20px;
+    background: none;
+    font: 400 normal 20px/20px 'Rock Star';
+    color: #000D08;
+    max-width: 400px;
+    outline: none;
+}
+
+.contact input[type=text] ::placeholder,
+.contact input[type=tel] ::placeholder {
+    font: 400 normal 20px/20px 'Rock Star';
+    color: rgba(0, 13, 8, 0.5);
+}
+
+.contact input[type=text]:focus,
+.contact input[type=tel]:focus {
+    border-bottom: 2px solid #ff9900;
+}
+
+.contact .checkbox-wrap {
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.contact .checkbox-wrap p {
+    font: 400 normal 20px/20px 'Rock Star';
+    color: #000D08;
+    margin-bottom: 20px;
+}
+
+.contact .checkbox-wrap label {
+    margin-bottom: 20px;
+    padding-left: 50px;
+    max-width: 300px;
+}
+
+.contact .checkbox-wrap label span {
+    font: 400 normal 20px/36px 'Rock Star';
+    color: #000D08;
+}
+
+.contact .checkbox-wrap label .chekbox-img {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    margin-left: -50px;
+    background-image: url('../images/checkbox-off.webp');
+    background-size: cover;
+}
+
+.contact .checkbox-wrap label .checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.contact .checkbox-wrap label .checkbox:checked+.chekbox-img {
+    background-image: url('../images/checkbox-checked.webp');
+}
+
+.contact .checkbox-wrap label .checkbox:focus+.chekbox-img {
+    background-image: url('../images/checkbox-off-focus.webp');
+}
+
+.contact .checkbox-wrap label .checkbox:focus:checked+.chekbox-img {
+    background-image: url('../images/checkbox-checked-focus.webp');
+}
+
+.form-button {
+    display: block;
+    width: 300px;
+    font: 400 normal 18px/18px 'Rock Star';
+    color: #000D08;
+    text-align: center;
+    padding: 20px 0px;
+    background: #ff9900;
+    border: 2.5px solid #000D08;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-box-shadow: 4px 4px 0px 0px #000d08;
+    box-shadow: 4px 4px 0px 0px #000d08;
+    transition: 0.5s;
+}
+
+.form-button:hover {
+    box-shadow: none;
+}
+
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #000D08;
+}
+
+.footer .left-part p {
+    font: 400 normal 18px/18px 'Rock Star';
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer .left-part a {
+    font: 400 normal 18px/18px 'Rock Star';
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .left-part a:hover {
+    text-decoration: underline;
+}
+
+.footer .right-part .social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer .right-part .social-icons .social-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.footer .right-part .social-icons .social-icon:hover {
+    transform: scale(1.1);
+}
+
+.footer .right-part .social-icons .telegram {
+    background-image: url('../images/telegram-white.webp');
+}
+
+.footer .right-part .social-icons .whatsapp {
+    background-image: url('../images/whatsapp-white.webp');
+}
+
+.footer .right-part .social-icons .viber {
+    background-image: url('../images/viber-white.webp');
+}
+
+.footer .right-part .social-icons .messenger {
+    background-image: url('../images/messenger-white.webp');
+}
+
+.footer .right-part .social-icons .instagram {
+    background-image: url('../images/instagram-white.webp');
+}
+
+.footer .right-part .email {
+    font: 400 normal 20px/20px 'Rock Star';
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .right-part .email:hover {
+    text-decoration: underline;
+}
+
+
+/* PopUp окна (Всплывающие окна) */
+
+.pop-up-mask {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 995;
+    transform: scale(0);
+    transition: 0.4s ease-in-out;
+}
+
+.pop-up-mask.open {
+    transform: scale(100%);
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.pop-up-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.pop-up-body-urgent-launch {
+    position: fixed;
+    top: calc(100vh - 80%);
+    left: calc(50% - 25%);
+    margin: auto;
+    width: 50%;
+    max-width: 680px;
+    background-color: #fff;
+    text-align: center;
+    padding: 40px 15px 45px;
+    z-index: 999;
+    transform: scale(0);
+    transition: 0.5s ease-in-out;
+}
+
+.pop-up-body-urgent-launch.open {
+    transform: scale(100%);
+}
+
+.pop-up-body-urgent-launch .title {
+    font: 700 normal 36px/36px 'Wadik';
+    color: #000D08;
+    margin-bottom: 10px;
+}
+
+.pop-up-body-urgent-launch .sub-title {
+    font: 400 normal 18px/18px 'Rock Star';
+    color: #000D08;
+    margin-bottom: 10px;
+}
+
+.pop-up-body-urgent-launch .time {
+    font: 700 normal 28px/28px 'Wadik';
+    color: #ff9900;
+    margin-bottom: 35px;
+}
+
+.pop-up-body-urgent-launch .cta {
+    font: 700 normal 28px/28px 'Wadik';
+    color: #000D08;
+    margin-bottom: 35px;
+}
+
+.pop-up-body-urgent-launch .social-icons {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pop-up-body-urgent-launch .social-icons .social-icon {
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.pop-up-body-urgent-launch .social-icons .social-icon.telegram {
+    background-image: url('../images/telegram-black.webp');
+}
+
+.pop-up-body-urgent-launch .social-icons .social-icon.viber {
+    background-image: url('../images/viber-black.webp');
+}
+
+.pop-up-body-urgent-launch .social-icons .social-icon.whatsapp {
+    background-image: url('../images/whatsapp-black.webp');
+}
+
+.pop-up-body-urgent-launch .social-icons .social-icon.messenger {
+    background-image: url('../images/messenger-black.webp');
+}
+
+.pop-up-body-urgent-launch .social-icons .social-icon.telegram:hover {
+    background-image: url('../images/telegram-orange.webp');
+}
+
+.pop-up-body-urgent-launch .social-icons .social-icon.viber:hover {
+    background-image: url('../images/viber-orange.webp');
+}
+
+.pop-up-body-urgent-launch .social-icons .social-icon.whatsapp:hover {
+    background-image: url('../images/whatsapp-orange.webp');
+}
+
+.pop-up-body-urgent-launch .social-icons .social-icon.messenger:hover {
+    background-image: url('../images/messenger-orange.webp');
+}
+
+.pop-up-slider-body {
+    position: fixed;
+    top: 50px;
+    left: calc(50% - 40%);
+    width: 80%;
+    background-color: #fff;
+    padding: 50px 20px 20px;
+    z-index: 999;
+    transform: scale(0);
+    transition: 0.5s ease-in-out;
+}
+
+.pop-up-slider-body img.slider-image-pc {
+    width: 100%;
+}
+
+.pop-up-slider-body img.slider-image-mob {
+    display: none;
+}
+
+.pop-up-slider-body.open-slide {
+    transform: scale(100%);
+}
+
+.pop-up-body-contact {
+    position: fixed;
+    top: calc(100vh - 95%);
+    left: calc(50% - 25%);
+    margin: auto;
+    width: 50%;
+    max-width: 680px;
+    background-color: #fff;
+    padding: 45px 25px;
+    z-index: 996;
+    transform: scale(0);
+    transition: 0.5s ease-in-out;
+}
+
+.pop-up-body-contact.open {
+    transform: scale(100%);
+}
+
+.pop-up-body-contact .title {
+    text-align: center;
+    font: 700 normal 36px/36px 'Wadik';
+    color: #000D08;
+    margin-bottom: 10px;
+}
+
+.pop-up-body-contact .sub-title {
+    text-align: center;
+    font: 400 normal 18px/22px 'Rock Star';
+    color: #000D08;
+    margin-bottom: 40px;
+}
+
+.pop-up-body-contact .contact {
+    padding: 0px 30px;
+    align-items: center;
+}
+
+.pop-up-body-contact .contact input[type=text],
+.pop-up-body-contact .contact input[type=tel] {
+    width: 100%;
+    max-width: none;
+    border: 3px solid #ff9900;
+    padding: 10px 13px;
+}
+
+.pop-up-body-contact .chebox-button-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.pop-up-body-contact .contact .checkbox-wrap {
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+
+.pop-up-body-contact .contact .checkbox-wrap .last-label {
+    margin-bottom: 0px;
+}
+
+
+/* Маска Спасибо */
+
+.thanks-mask {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 998;
+    transform: scale(0);
+    transition: 0.4s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.thanks-mask.open {
+    transform: scale(100%);
+}
+
+.thanks-body {
+    position: fixed;
+    top: 10%;
+    left: calc(50% - 20%);
+    margin: auto;
+    width: 40%;
+    background-color: #fff;
+    padding: 45px 25px;
+    z-index: 999;
+    transform: scale(0);
+    transition: 0.5s ease-in-out;
+}
+
+.thanks-body.open {
+    transform: scale(100%);
+}
+
+.flex-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flex-wrap img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.flex-wrap .text .title {
+    font: 400 normal 20px/20px 'Rock Star';
+    color: #000D08;
+    margin-bottom: 20px;
+}
+
+.flex-wrap .text .sub-title {
+    font: 400 normal 18px/20px 'Rock Star';
+    color: #000D08;
+}
+
+.thanks-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
